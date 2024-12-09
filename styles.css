@@ -1,0 +1,270 @@
+*,::before,::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+overflow-x: hidden;
+
+}
+/* First i'm going to tackle the navbar */
+#navbar {
+background-color: #548ca1;
+width: 100vw;
+height: 70px;
+font-size: 2em;
+font-family: 'EB Garamond', sans-serif;
+position: fixed;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+box-shadow: 0px 6px 5px -3px #0A0A0A;
+z-index: 1;
+}
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+padding: 0 1rem;
+}
+#navbar li {
+display: inline-block;
+padding: 15px;
+}
+#navbar a {
+text-decoration: none;
+color: #fff;
+transition: color 0.3s;
+}
+#navbar a:visited {
+color: #fff;
+}
+#navbar a:hover{
+color: #9fd5ea;
+}
+@media screen and (max-width: 375px){
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+padding: 0 1rem;
+}
+}
+
+/*navbar is finished and I feel really good about it this time!! I referenced how to mess with the anchor tag and its effects as well as lining up the nav bar elements*/
+
+/*Next, I'm going to work on the Welcome section elemnt */
+#welcome-section {
+background: rgb(27,27,26);
+background: linear-gradient(212deg, rgba(27,27,26,1) 25%, rgba(37,37,37,1) 50%, rgba(56,55,55,1) 75%, rgba(83,82,82,1) 100%);
+width: 100vw;
+height: 100vh;
+font-family: 'Bodoni Moda', sans-serif;
+font-size: 2.5em;
+position: relative;
+padding: 80px;
+}
+#welcome-section, h1 {
+color: #fff;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+#welcome-section, p {
+color: #548ca1;
+}
+/* #welcome-section is done! I'm feeling good with it so far, this was probably the easiest section so we'll see how the rest goes. */
+
+/* Now i'm onto a little more complicated part. I have to make the projects sections and make it look good */
+#projects {
+background-color: #548ca1;
+color: #fff;
+font-family: 'EB Garamond', sans-serif;
+text-align: center;
+padding: 5rem 2rem;
+}
+.project-header {
+font-size: 2.5rem;
+max-width: 650px;
+margin: 0 auto 3rem auto;
+padding-bottom: 1rem;
+border-bottom: 1px solid #fff;
+} 
+.project-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 4rem;
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 1rem;
+
+}
+@media screen and (max-width: 1024px) {
+.project-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+@media screen and (max-width: 500px) {
+.project-grid {
+  grid-template-columns: repeat(1, 1fr);
+}
+}
+.project-tile{
+display: flex;
+flex-direction: column;
+text-decoration: none;
+border-radius: 8px;
+overflow: hidden;
+height: 100%;
+box-shadow: 0px -1px 5px 0px #EFF0F4;
+}
+.project-tile:hover,
+.project-tile:focus{
+box-shadow: 0px 0px 19px 8px #EFF0F4;
+transition: background-color 1s ease;
+}
+.project-title-name {
+color: #fff;
+font-size: 1.2rem;
+text-align: center;
+margin: 0.5rem 0;
+padding: 0.5rem; 
+}
+.project-tile:hover,
+.project-tile:focus {
+background-color: #9fd5ea;
+transition: background-color 1s ease;
+}
+.project-title img{
+height: 180px;
+width: 100%;
+object-fit: cover;
+margin-bottom: 1rem;
+
+}
+/*
+.project-tile {
+color: #fff;
+margin-top: 0.5rem;
+font-size: 1.2rem;
+} */
+.project-tile-btn {
+display: inline-block;
+background-color: #84bed3;
+color: #fff;
+font-weight: bold;
+text-align: center;
+font-size: 1.2em;
+margin: 3rem auto 0 auto;
+padding: 0.5rem 2rem;
+max-width: 200px;
+border-radius: 5px;
+transition: background-color 1s ease;
+border: none;
+}
+.project-tile-btn:hover
+{
+background-color: #9fd5ea;
+border: 0.1px solid #fff;
+}
+/* Ok so i used chatgpt to help me through this and i'm glad that I did because I origianlly had my projects section as a listed item, then I had each project in its own individual div and THEN chat gpt told me to just put everything in ONE div and guess what, it worked! */
+/* Now onto making the footer of my page and finishing it all off */
+#contact-me {
+background: #213137;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100vw;
+height: 80vh;
+font-family: 'Bodoni Moda', sans-serif;
+font-size: 2.5em;
+position: relative;
+padding: 0 2rem;
+}
+#contact-me, .contact-header{
+color: #fff;
+padding-top: 20px;
+}
+#contact-me .how {
+color: #fff;
+font-size: 0.6em;
+margin-bottom: 2rem;
+}
+/* This will style the contact list and icons */
+#list {
+display: flex;
+justify-content: center;
+align-content: center;
+text-align: center;
+width: 80%;
+max-width: 980px;
+margin: 0 auto;
+list-style-type: none;
+padding: 0;
+}
+.reach {
+display: inline-block;
+width: 100%;
+margin: 10px 0;
+}
+
+#profile-link{
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+color: #fff;
+font-size: 0.7em;
+transition: transform 0.6s ease;
+}
+
+#icon{
+color: #fff;
+margin-right: 10px;
+font-size: 1em;
+transition: transform 0.4s ease;
+}
+
+#profile-link:hover,
+#profile-link:focus{
+transform: translateY(15px);
+}
+#profile-link:hover #icon {
+transform: translateY(2px);
+}
+#profile-link:active {
+transform: translateY(20px);
+}
+/*this is the footer section of the document */
+
+footer {
+font-weight: 200;
+display: flex;
+justify-content: space-evenly;
+border-top: 5px solid #548ca1;
+padding: 2rem;
+background: #213137;
+font-size: 1.4rem;
+margin: 0;
+font-family: 'Bodoni Moda', sans-serif;
+}
+.description {
+color: #fff;
+margin: 2rem;
+}
+.forfCC {
+color: #fff;
+margin: 2rem;
+}
+a, #fCC {
+color: #fff;
+text-decoration: none;
+}
+#fCC:visited {
+color: #fff;
+}
